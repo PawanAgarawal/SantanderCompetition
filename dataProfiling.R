@@ -7,6 +7,8 @@ setwd("D:/Documents and Settings/Pawan68267/Desktop")
 library(data.table)
 train <- fread("train.csv",header = TRUE)
 
+ind_v <- train[, 3:ncol(train)]
+
 dataCleaning <- function(data){
   
   #identify variables with zero variance and remove it from the data
